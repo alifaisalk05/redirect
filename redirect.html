@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="refresh" content="0;url=https://alifaisalk05.github.io/verify-page/verify.html?code=" id="meta">
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const code = params.get("code");
+    const target = "https://kingx.github.io/verify-page/verify.html?code=" + encodeURIComponent(code);
+    document.getElementById("meta").setAttribute("content", "0;url=" + target);
+    window.location.href = target;
+  </script>
+</head>
+<body>
+  Redirecting...
+</body>
+</html>
