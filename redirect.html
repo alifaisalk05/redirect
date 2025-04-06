@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta http-equiv="refresh" content="0;url=https://alifaisalk05.github.io/verify-page/verify.html?code=" id="meta">
+  <meta charset="UTF-8">
+  <title>Redirecting...</title>
   <script>
-    const params = new URLSearchParams(window.location.search);
-    const code = params.get("code");
-    const target = "https://kingx.github.io/verify-page/verify.html?code=" + encodeURIComponent(code);
-    document.getElementById("meta").setAttribute("content", "0;url=" + target);
-    window.location.href = target;
+    const code = localStorage.getItem("verify_code");
+    if (code) {
+      const target = `https://alifaisalk05.github.io/verify-page/verify.html?code=${encodeURIComponent(code)}`;
+      window.location.href = target;
+    } else {
+      document.write("Verification code not found. Please go back and try again.");
+    }
   </script>
 </head>
 <body>
